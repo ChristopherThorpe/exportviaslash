@@ -1,9 +1,23 @@
-Usage: 
- /exportviaslash all
-or 
- /exportviaslash profession
-where profession is one of:
- "Blacksmithing", "Tailoring", "Inscription", "Jewelcrafting", "Alchemy",
- "Leatherworking", "Engineering", "Enchanting", "Cooking", "First Aid"
+Zugslist Spell Export Addon
+===========================
 
-After running this slash command in the game, the exportviaslash.lua Saved variables file in WTF\Account will have the table SpellsMap.
+To export all professions:
+
+    /exportviaslash all
+
+  or just:
+
+    /exportviaslash
+
+To export a specific profession:
+
+    /exportviaslash [profession_name]
+
+  where profession is one of:
+
+    'alchemy', 'blacksmithing', 'cooking', 'enchanting', 'engineering',
+    'first_aid', 'inscription', 'jewelcrafting', 'leatherworking', 'tailoring'
+
+After executing this command in-game, you can find the exported data here:
+
+  /Applications/World of Warcraft/WTF/Account/$ACCOUNT/SavedVariables/exportviaslash.lua

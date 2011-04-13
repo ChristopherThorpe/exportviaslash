@@ -48,16 +48,16 @@ end
 SpellsMap = {}
 
 function exportviaslash:OnInitialize()
-   buildBasicTradeTable({ 2259,3101,3464,11611,28596,28677,28675,28672,51304 })            -- alchemy
-   buildBasicTradeTable({ 2018,3100,3538,9785,9788,9787,17039,17040,17041,29844,51300 })   -- bs
-   buildBasicTradeTable({ 7411,7412,7413,13920,28029,51313 })                              -- enchanting
-   buildBasicTradeTable({ 4036,4037,4038,12656,20222,20219,30350,51306 })                  -- eng
-   buildBasicTradeTable({ 45357,45358,45359,45360,45361,45363 })                           -- inscription
-   buildBasicTradeTable({ 25229,25230,28894,28895,28897,51311 })                           -- jc
-   buildBasicTradeTable({ 2108,3104,3811,10656,10660,10658,10662,32549,51302 })            -- lw
-   buildBasicTradeTable({ 3908,3909,3910,12180,26801,26798,26797,26790,51309 })            -- tailoring
-   buildBasicTradeTable({ 2550,3102,3413,18260,33359,51296 })                              -- cooking
-   buildBasicTradeTable({ 3273,3274,7924,10846,27028,45542,10846 })                        -- first aid
+   buildBasicTradeTable({ 2259,3101,3464,11611,28596,28677,28675,28672,51304,80731 })           -- alchemy
+   buildBasicTradeTable({ 2018,3100,3538,9785,9788,9787,17039,17040,17041,29844,51300,76666 })  -- blacksmithing
+   buildBasicTradeTable({ 7411,7412,7413,13920,28029,51313,74258 })                             -- enchanting
+   buildBasicTradeTable({ 4036,4037,4038,12656,20222,20219,30350,51306,82774 })                 -- eng
+   buildBasicTradeTable({ 45357,45358,45359,45360,45361,45363,86008 })                          -- inscription
+   buildBasicTradeTable({ 25229,25230,28894,28895,28897,51311,73318 })                          -- jc
+   buildBasicTradeTable({ 2108,3104,3811,10656,10660,10658,10662,32549,51302,81199 })           -- lw
+   buildBasicTradeTable({ 3908,3909,3910,12180,26801,26798,26797,26790,51309, 75156 })          -- tailoring
+   buildBasicTradeTable({ 2550,3102,3413,18260,33359,51296,88053 })                             -- cooking
+   buildBasicTradeTable({ 3273,3274,7924,10846,27028,45542,74559 })                             -- first aid
 end
 
 function exportviaslash:OnEnable(first)

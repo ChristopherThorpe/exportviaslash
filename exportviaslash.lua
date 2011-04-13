@@ -75,6 +75,11 @@ function SlashCmdList.EXPORTVIASLASH(msg)
 
   build = tonumber(build)
 
+  if( SpellDataLookupTable[build] == nil ) then
+    print("Your SpellDataLookupTable.lua does not contain info for build: #"..build)
+    return false
+  end
+
   if(blank(msg)) then
     msg = "all"
   end
@@ -138,7 +143,6 @@ function SlashCmdList.EXPORTVIASLASH(msg)
     end
 
     print("END PRINTING ALL KNOWN RECIPES IN ", professions[n]);
-
   end
 
   -- Commented out code that tested recipe => characters mapping approach

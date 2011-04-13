@@ -1,7 +1,7 @@
-## Interface: 30300
-## Title: my slash export addon
-## Notes: Some notes about this addon.
-## Author: WoW Player
+## Interface: 40000
+## Title: Zugslist spell data export tool
+## Notes: Used for extracting spell IDs
+## Author: Zugslist
 ## SavedVariables: SpellsMap
 ## Version: 0.1
 

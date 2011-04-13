@@ -48,22 +48,20 @@ end
 SpellsMap = {}
 
 function exportviaslash:OnInitialize()
-   buildBasicTradeTable({ 2259,3101,3464,11611,28596,28677,28675,28672,51304,80731 })           -- alchemy
-   buildBasicTradeTable({ 2018,3100,3538,9785,9788,9787,17039,17040,17041,29844,51300,76666 })  -- blacksmithing
-   buildBasicTradeTable({ 7411,7412,7413,13920,28029,51313,74258 })                             -- enchanting
-   buildBasicTradeTable({ 4036,4037,4038,12656,20222,20219,30350,51306,82774 })                 -- eng
-   buildBasicTradeTable({ 45357,45358,45359,45360,45361,45363,86008 })                          -- inscription
-   buildBasicTradeTable({ 25229,25230,28894,28895,28897,51311,73318 })                          -- jc
-   buildBasicTradeTable({ 2108,3104,3811,10656,10660,10658,10662,32549,51302,81199 })           -- lw
-   buildBasicTradeTable({ 3908,3909,3910,12180,26801,26798,26797,26790,51309, 75156 })          -- tailoring
-   buildBasicTradeTable({ 2550,3102,3413,18260,33359,51296,88053 })                             -- cooking
-   buildBasicTradeTable({ 3273,3274,7924,10846,27028,45542,74559 })                             -- first aid
+  buildBasicTradeTable({ 2259,3101,3464,11611,28596,28677,28675,28672,51304,80731 })            -- alchemy
+  buildBasicTradeTable({ 2018,3100,3538,9785,9788,9787,17039,17040,17041,29844,51300,76666 })   -- blacksmithing
+  buildBasicTradeTable({ 7411,7412,7413,13920,28029,51313,74258 })                              -- enchanting
+  buildBasicTradeTable({ 4036,4037,4038,12656,20222,20219,30350,51306,82774 })                  -- eng
+  buildBasicTradeTable({ 45357,45358,45359,45360,45361,45363,86008 })                           -- inscription
+  buildBasicTradeTable({ 25229,25230,28894,28895,28897,51311,73318 })                           -- jc
+  buildBasicTradeTable({ 2108,3104,3811,10656,10660,10658,10662,32549,51302,81199 })            -- lw
+  buildBasicTradeTable({ 3908,3909,3910,12180,26801,26798,26797,26790,51309, 75156 })           -- tailoring
+  buildBasicTradeTable({ 2550,3102,3413,18260,33359,51296,88053 })                              -- cooking
+  buildBasicTradeTable({ 3273,3274,7924,10846,27028,45542,74559 })                              -- first aid
 end
 
 function exportviaslash:OnEnable(first)
 end
-
-SLASH_EXPORTVIASLASH1 = "/exportviaslash";
 
 function SlashCmdList.EXPORTVIASLASH(msg)
   local version, build = GetBuildInfo()
@@ -74,8 +72,8 @@ function SlashCmdList.EXPORTVIASLASH(msg)
   -- depending on profession name generate trade link where all bits are enabled
   if( msg == "all" ) then
     professions = {
-      "Blacksmithing", "Tailoring", "Inscription", "Jewelcrafting", "Alchemy",
-      "Leatherworking", "Engineering", "Enchanting", "Cooking", "First Aid"
+      "blacksmithing", "tailoring", "inscription", "jewelcrafting", "alchemy",
+      "leatherworking", "engineering", "enchanting", "cooking", "first_aid"
     }
   else
     professions = { msg }
@@ -85,25 +83,25 @@ function SlashCmdList.EXPORTVIASLASH(msg)
     print("PRINTING ALL KNOWN RECIPES IN ", professions[n]);
 
     local my_link
-    if( professions[n] == "Blacksmithing" ) then
+    if( professions[n] == "blacksmithing" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:2018:2:75:380000003351CDF:" .. "/" .. string.rep("/", 87) .. "|h[Blacksmithing]|h|r" .. " TEST"
-    elseif ( professions[n] == "Tailoring" ) then
+    elseif ( professions[n] == "tailoring" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:26798:426:450:380000001ACFFFB:" .. "/" .. string.rep("/", 73) .. "|h[Tailoring]|h|r" .. " TEST"
-    elseif ( professions[n] == "Inscription" ) then
+    elseif ( professions[n] == "inscription" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:45363:431:450:380000001ABD9F5:" .. "/" .. string.rep("/", 75) .. "|h[Inscription]|h|r" .. " TEST"
-    elseif ( professions[n] == "Jewelcrafting" ) then
+    elseif ( professions[n] == "jewelcrafting" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:51311:450:450:380000002A47F07:" .. "/" .. string.rep("/", 95) .. "|h[Jewelcrafting]|h|r" .. " TEST"
-    elseif ( professions[n] == "Alchemy" ) then
+    elseif ( professions[n] == "alchemy" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:28677:450:450:380000002E39D99:" .. "/" .. string.rep("/", 44) .. "|h[Alchemy]|h|r" .. " TEST"
-    elseif ( professions[n] == "Leatherworking" ) then
+    elseif ( professions[n] == "leatherworking" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:51302:420:450:380000001B74BA8:" .. "/" .. string.rep("/", 91) .. "|h[Leatherworking]|h|r" ..  " TEST"
-    elseif ( professions[n] == "Engineering" ) then
+    elseif ( professions[n] == "engineering" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:51306:450:450:3800000007E3495:" .. "/" .. string.rep("/", 54) .. "|h[Engineering]|h|r" .. " TEST"
-    elseif ( professions[n] == "Enchanting" ) then
+    elseif ( professions[n] == "enchanting" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:51313:450:450:380000002FDA45E:" .. "/" .. string.rep("/", 51) .. "|h[Enchanting]|h|r" .. " TEST"
-    elseif ( professions[n] == "Cooking" ) then
+    elseif ( professions[n] == "cooking" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:2550:450:450:380000002FDA45E:" .. "/" .. string.rep("/", 30) .. "|h[Cooking]|h|r" .. " TEST"
-    elseif ( professions[n] == "First Aid" ) then
+    elseif ( professions[n] == "first_aid" ) then
       my_link = "TEST " .. "|cffffd000|Htrade:3273:450:450:380000002FDA45E:" .. "/" .. string.rep("/", 5) .. "|h[First Aid]|h|r" .. " TEST"
     end
 

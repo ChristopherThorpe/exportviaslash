@@ -63,14 +63,24 @@ end
 function exportviaslash:OnEnable(first)
 end
 
+SLASH_EXPORTVIASLASH1 = "/exportviaslash";
+
+function blank(str)
+  return str == nil or str == '' or (not str)
+end
+
 function SlashCmdList.EXPORTVIASLASH(msg)
   local version, build = GetBuildInfo()
   local professions = {}
 
   build = tonumber(build)
 
+  if(blank(msg)) then
+    msg = "all"
+  end
+
   -- depending on profession name generate trade link where all bits are enabled
-  if( msg == "all" ) then
+  if( msg == "all" or msg == nil or not msg ) then
     professions = {
       "blacksmithing", "tailoring", "inscription", "jewelcrafting", "alchemy",
       "leatherworking", "engineering", "enchanting", "cooking", "first_aid"

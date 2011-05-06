@@ -1,4 +1,4 @@
-## Interface: 40000
+## Interface: 40100
 ## Title: Zugslist spell data export tool
 ## Notes: Used for extracting spell IDs
 ## Author: Zugslist
